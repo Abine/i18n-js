@@ -53,6 +53,7 @@ module SimplesIdeias
         File.open(load_path_hash_cache, "w+") do |f|
           f.write(cached_load_path_hash)
         end
+        File.chmod(0666, load_path_hash_cache)
       end
 
       class << self
